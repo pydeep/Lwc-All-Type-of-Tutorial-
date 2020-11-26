@@ -1,0 +1,26 @@
+<apex:page standardController="Account" extensions="AccountRecordcls">
+   <apex:form > 
+    <apex:pageBlock >
+        <apex:pageBlockSection title="Account Info" collapsible="false">
+            <apex:inputField value="{!Account.Name}"/>
+            <apex:inputField value="{!Account.Type}"/>
+            <apex:inputField value="{!Account.Rating}"/>
+        </apex:pageBlockSection>
+        
+     
+        
+        <apex:pageBlockButtons location="top">
+            <apex:commandButton value="Save" action="{!saveAccount}"/>
+        </apex:pageBlockButtons>
+        
+        <apex:pageBlock title="Account Record">
+            <apex:pageBlockTable value="{!acclist}" var="acc">
+                <apex:column value="{!acc.Rating}"/>
+                <apex:column value="{!acc.Type}"/>
+                <apex:column value="{!acc.Name}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+        
+    	</apex:pageBlock>
+   </apex:form>
+</apex:page>

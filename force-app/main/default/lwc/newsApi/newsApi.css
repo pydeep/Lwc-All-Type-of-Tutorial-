@@ -1,0 +1,9 @@
+.container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background: -webkit-linear-gradient()
+}
+.slds-grid.justify-center{
+    justify-content: center;
+}
